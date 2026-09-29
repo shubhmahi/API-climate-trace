@@ -21,6 +21,7 @@ except Exception as e:
 # 2. APP INITIALIZATION & ATO STYLING
 # ==========================================
 app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server  
 app.title = "ATO Climate Trace Dashboard"
 
 ATO_FONT = 'TW Cen MT'
@@ -409,6 +410,4 @@ def update_charts(years, sectors, subsectors, gases, sources, specific_country, 
 
 
 if __name__ == '__main__':
-    app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
-    server = app.server
-  # app.run(debug=True, port=8050)
+    app.run(debug=True, port=8050)
