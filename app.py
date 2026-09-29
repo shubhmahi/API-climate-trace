@@ -11,7 +11,7 @@ import numpy as np
 # ==========================================
 try:
     print("Loading Parquet data...")
-    df = pd.read_parquet('data/master_data2.parquet', engine='pyarrow')
+    df = pd.read_parquet('data/master_data3.parquet', engine='pyarrow')
     print("Data loaded successfully!")
 except Exception as e:
     print(f"Error loading parquet: {e}. Please run data_prep.py first.")
